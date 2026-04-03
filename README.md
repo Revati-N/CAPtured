@@ -1,4 +1,4 @@
-# CAPSHUNNED ⚡
+# CAPTURED ⚡
 
 **AI-powered funny image caption generator. Upload a photo, pick a vibe, get a caption that actually describes what's in it — not a generic template.**
 
