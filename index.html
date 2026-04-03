@@ -689,7 +689,7 @@ async function loadModel() {
     setBootStatus('Fetching model weights…', 10);
     S.classifier = await pipeline(
       'image-classification',
-      'Xenova/mobilenet_v2',
+      'qualcomm/MobileNet-v2',
       {
         progress_callback: (p) => {
           if (p.status === 'progress') {
