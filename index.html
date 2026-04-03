@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CAPtured — AI Image Caption Generator</title>
+<title>CAPSHUNNED — AI Image Caption Generator</title>
 <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -112,6 +112,7 @@
 
   @keyframes blink { 50% { opacity: 0; } }
 
+  /* ── TICKER ── */
   .ticker {
     background: var(--lime);
     color: var(--black);
@@ -323,6 +324,7 @@
 
   .upload-zone.has-image .img-replace-btn { display: block; }
 
+  /* ── CONTROLS ── */
   .controls-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -667,14 +669,14 @@
   <!-- Header -->
   <header class="header">
     <div class="header-badge">v2.0.4 // STABLE BUILD</div>
-    <h1>CAPTURED</h1>
+    <h1>CAPSHUNNED</h1>
     <p class="header-sub">AI-POWERED FUNNY CAPTION GENERATOR <span class="header-blink">█</span></p>
   </header>
 
   <!-- Ticker -->
   <div class="ticker">
     <span class="ticker-inner">
-      ★ DROP AN IMAGE ★ PICK YOUR VIBE ★ GET A CAPTION THAT SLAPS ★ OR AT LEAST MILDLY TICKLES ★ POWERED BY GEMINI ★ NO BACKEND ★ FULLY FREE ★ MADE WITH QUESTIONABLE JUDGMENT ★ CAPTURED LOADED SUCCESSFULLY ★ YOUR IMAGE WILL NOT ESCAPE JUDGMENT ★ &nbsp;&nbsp;&nbsp;
+      ★ DROP AN IMAGE ★ PICK YOUR VIBE ★ GET A CAPTION THAT SLAPS ★ OR AT LEAST MILDLY TICKLES ★ POWERED BY GEMINI ★ NO BACKEND ★ FULLY FREE ★ MADE WITH QUESTIONABLE JUDGMENT ★ CAPSHUNNED.EXE LOADED SUCCESSFULLY ★ YOUR IMAGE WILL NOT ESCAPE JUDGMENT ★ &nbsp;&nbsp;&nbsp;
     </span>
   </div>
 
@@ -757,7 +759,7 @@
   <!-- Generate -->
   <div class="generate-section">
     <button class="generate-btn" id="gen-btn" onclick="generate()">
-      <span class="btn-text">▶ CAPTURE THIS IMAGE</span>
+      <span class="btn-text">▶ CAPSHUN THIS IMAGE</span>
       <span class="loading-dots">PROCESSING...</span>
     </button>
   </div>
@@ -784,7 +786,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>CAPTURED // BUILT WITH GEMINI 2.5 FLASH // ZERO BACKENDS HARMED</p>
+    <p>CAPSHUNNED // BUILT WITH GEMINI 2.5 FLASH // ZERO BACKENDS HARMED</p>
     <p>★ <a href="https://aistudio.google.com/apikey" target="_blank">GET FREE API KEY</a> ★ <a href="https://github.com" target="_blank">GITHUB</a> ★</p>
   </footer>
 
@@ -925,7 +927,7 @@ async function generate() {
     };
 
     const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
       { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }
     );
 
